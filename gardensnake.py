@@ -26,7 +26,7 @@ while True:
             print(output)
             urllib.request.urlopen('http://' + host + "/out/" + hostname + "/" + str(output) + "/")
         else:
-            pass
+            time.sleep(5)
         
         time.sleep(2)
     except:
